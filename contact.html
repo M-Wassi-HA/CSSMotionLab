@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us - CSSMotionLab</title>
+  <link rel="shortcut icon" href="./mylogo.png" type="image/x-icon">
+  <meta name="description" content="Get in touch with the CSSMotionLab team for support, feature suggestions, or feedback regarding our CSS generators." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header Navigation -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-logo">
+        <div class="logo-icon">&lt;/&gt;</div>
+        <span class="logo-text">CSSMotionLab</span>
+        <span class="logo-badge">CSS Studio</span>
+      </a>
+      
+      <nav class="main-nav">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li class="dropdown-wrapper">
+            <a href="#" class="nav-link">Generators ▾</a>
+            <div class="dropdown-menu">
+              <a href="animation.html" class="dropdown-item"><span class="dropdown-icon">✨</span> CSS Animations</a>
+              <a href="button.html" class="dropdown-item"><span class="dropdown-icon">🔘</span> Button Hovers</a>
+              <a href="gradient.html" class="dropdown-item"><span class="dropdown-icon">🎨</span> Gradients</a>
+              <a href="shadow.html" class="dropdown-item"><span class="dropdown-icon">🌓</span> Box Shadows</a>
+              <a href="border-radius.html" class="dropdown-item"><span class="dropdown-icon">🔳</span> Border Radius</a>
+              <a href="loader.html" class="dropdown-item"><span class="dropdown-icon">⏳</span> CSS Loaders</a>
+              <a href="text-animation.html" class="dropdown-item"><span class="dropdown-icon">🔤</span> Text Effects</a>
+              <a href="card-hover.html" class="dropdown-item"><span class="dropdown-icon">🎴</span> Card Hovers</a>
+            </div>
+          </li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="contact.html" class="nav-link active">Contact</a></li>
+        </ul>
+        <a href="animation.html" class="btn btn-primary btn-sm">Explore Tools</a>
+      </nav>
+
+      <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="drawer-backdrop" id="drawer-backdrop"></div>
+  <aside class="mobile-drawer" id="mobile-drawer">
+    <ul class="footer-links">
+      <li><a href="index.html" class="mobile-link">Home</a></li>
+      <li><a href="about.html" class="mobile-link">About Us</a></li>
+      <li><a href="contact.html" class="mobile-link active">Contact Us</a></li>
+      <li><a href="privacy.html" class="mobile-link">Privacy Policy</a></li>
+    </ul>
+  </aside>
+
+  <!-- Contact Content -->
+  <main class="container">
+    <div class="article-page">
+      <div class="article-card">
+        <h1>Contact Us</h1>
+        <p>Have questions, feature requests, or feedback about our CSS generators? Send us a message using the form below and our engineering team will get back to you shortly.</p>
+        
+        <form id="contact-form" class="contact-form">
+          <div class="form-group">
+            <label for="contact-name">Your Full Name</label>
+            <input type="text" id="contact-name" class="form-input" required placeholder="e.g. Sarah Jenkins" />
+          </div>
+
+          <div class="form-group">
+            <label for="contact-email">Your Email Address</label>
+            <input type="email" id="contact-email" class="form-input" required placeholder="name@example.com" />
+          </div>
+
+          <div class="form-group">
+            <label for="contact-subject">Subject</label>
+            <select id="contact-subject" class="form-select" required>
+              <option value="general">General Inquiry</option>
+              <option value="feature">New Tool Feature Request</option>
+              <option value="bug">Report a Bug / Issue</option>
+              <option value="partnership">Advertising &amp; Partnership</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="contact-message">Message</label>
+            <textarea id="contact-message" class="form-input" required placeholder="Write your message here..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-lg" style="margin-top: 0.5rem;">
+            📨 Send Message
+          </button>
+        </form>
+
+        <div class="admin-inbox-section" style="margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border-color);">
+          <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; margin-bottom: 1rem;">
+            <div>
+              <h3 style="font-size: 1.1rem; color: var(--text-main); font-weight: 600; display: flex; align-items: center; gap: 0.5rem;">
+                💬 Community Messages &amp; Inbox
+              </h3>
+              <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.2rem;">All messages are visible to everyone. You can only delete messages sent from your device.</p>
+            </div>
+            <button id="clear-messages-btn" class="btn btn-secondary btn-sm" style="font-size: 0.8rem; background: rgba(239, 68, 68, 0.15); color: #ef4444; border-color: rgba(239, 68, 68, 0.3);">
+              🗑️ Clear My Sent Messages
+            </button>
+          </div>
+          <div id="messages-list" style="display: flex; flex-direction: column; gap: 0.85rem;">
+            <!-- Rendered dynamically by script.js -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; 2026 CSSMotionLab. Contact Support Studio.</p>
+        <p><a href="index.html" style="color: var(--primary);">Return to Home</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

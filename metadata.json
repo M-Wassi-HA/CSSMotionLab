@@ -1,0 +1,6 @@
+{
+  "name": "CSSMotionLab",
+  "description": "CSS Effects & Animation Generator Studio - A professional online toolkit for web designers and developers to generate CSS effects, animations, gradients, loaders, buttons, shadows, and text animations with live preview.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
